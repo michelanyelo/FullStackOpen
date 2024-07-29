@@ -11,6 +11,13 @@ const Button = ({ handleClick, text }) => {
 
 // a proper place to define Statistics component
 const Statistics = ({ good, neutral, bad }) => {
+  if (good + neutral + bad === 0) {
+    return (
+      <div>
+        <p>No feedback given</p>
+      </div>
+    )
+  }
   const total = good + neutral + bad
   const average = total === 0 ? 0 : (good * 1 + neutral * 0 + bad * -1) / total
   const positivity = total === 0 ? 0 : (good / total) * 100
