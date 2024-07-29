@@ -9,7 +9,7 @@ const Button = ({ handleClick, text }) => {
   )
 }
 
-// Statistics component
+// a proper place to define Statistics component
 const Statistics = ({ good, neutral, bad }) => {
   const total = good + neutral + bad
   const average = total === 0 ? 0 : (good * 1 + neutral * 0 + bad * -1) / total
